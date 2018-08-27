@@ -1,0 +1,19 @@
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 300%;
+    background-color: lightyellow;
+    padding: 20px;
+}
+body {
+    background-image: url(../images/bananas.png);
+}
+.container {
+    background-image: url(../images/leaves.jpg);
+    display: flex;
+    justify-content: center;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
