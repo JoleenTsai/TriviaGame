@@ -115,6 +115,7 @@
         var qChoice3
         var qChoice4
         var qChoice5
+        var qChoice6
 
         $(document).on('click', '.choice', function () {
             let temp = $(this).attr('name').split('-')
@@ -125,12 +126,12 @@
         $('.finishQuiz').on('click', function () {
             count = 0
             for (let i = 0; i < questions.length; i++) {
-                $('.answer-${i}').css('visibility', 'visible')
+                $(`.answer-${i}`).css('visibility', 'visible')
             if (window[`qChoice${i}`] === questions[i].correct) {
                 count++
                 }
             }
-            if (count === 6) {
+            if (count === 7) {
                 alert('You win!')
             } else {
                 alert('Try again!')
