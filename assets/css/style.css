@@ -7,6 +7,8 @@ h1 {
 }
 h2 {
     font-size: 150%;
+    display: flex;
+    justify-content: center;
 }
 body {
     background-image: url(../images/bananas.png);
@@ -16,10 +18,16 @@ body {
     background-image: url(../images/leaves.jpg);
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
     margin: 20px 0px 20px 0px;
 }
 .container {
     background-image: url(../images/vintage-concrete.png);
-    display: flex;
-    justify-content: center;
+}
+
+.finishQuiz {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 150%;
 }
