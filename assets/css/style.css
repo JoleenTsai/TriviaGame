@@ -26,8 +26,23 @@ body {
     background-image: url(../images/vintage-concrete.png);
 }
 
+.finish {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 20px 0px;
+}
+
 .finishQuiz {
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
     font-size: 150%;
+}
+
+.quizAnswer {
+    color: black;
+}
+
+#answerReveal {
+    color: lightseagreen;
+    font-weight: bold;
 }
