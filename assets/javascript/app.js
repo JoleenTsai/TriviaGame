@@ -31,9 +31,9 @@ let questions = [
     },
     {
         id: 5,
-        question: 'Bamboo, bananas, sugar cane, rubber, ginger, vanilla, and black pepper are not found in the tropical rainforest. True or False?',
-        choices: ['True', 'False'],
-        correct: 'True',
+        question: 'Where do poison-arrow frogs lay their eggs?',
+        choices: ['In a Pond', 'On Leaves', 'In the Dirt', 'In a Nest'],
+        correct: 'On Leaves',
     },
     {
         id: 6,
@@ -103,9 +103,13 @@ function finishGame() {
             count++
         }
     }
+    $('#message').empty('')
+
     if (count === 7) {
+        $('#message').append(`You Win!`)       
         alert('You win!')
     } else {
+        $('#message').append(`Try Again..`)
         alert('Try again!')
     }
 
@@ -125,7 +129,8 @@ function timeConversion(t) {
     }
     return minutes + ':' + seconds
 }
-
+let message = ''
+$('#message').html('Good Luck!')
 let time = 120
 $('.time').html('02:00')
 
