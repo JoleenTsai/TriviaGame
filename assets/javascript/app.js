@@ -123,23 +123,23 @@ function timeConversion(t) {
         seconds = '0' + seconds
     }
     if (minutes === 0) {
-        minutes = '00'
+        minutes = ` 00`
     } else if (minutes < 10) {
-        minutes = '0' + minutes
+        minutes = ` 0` + minutes
     }
     return minutes + ':' + seconds
 }
 let message = ''
 $('#message').html('Good Luck!')
 let time = 120
-$('.time').html('02:00')
+$('.time').html(` 02:00`)
 
 let gameTimer = setInterval(function () {
     time--
     if (time > 0) {
         $('.time').html(timeConversion(time))
     } else {
-        $('.time').html('00:00')
+        $('.time').html(` 00:00`)
         finishGame()
     }
 }, 1000)
