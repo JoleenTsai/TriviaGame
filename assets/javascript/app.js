@@ -84,13 +84,13 @@ var qChoice4
 var qChoice5
 var qChoice6
 
-$(document).on('click', '.choice', function () {
+$(document).on('click', '.choice', function() {
     let temp = $(this).attr('name').split('-')
     let qId = temp[1]
     window[`qChoice${qId}`] = $(this).attr('data-choice')
 })
 
-$('.finishQuiz').on('click', function () {
+$('.finishQuiz').on('click', function() {
     finishGame()
 })
 
@@ -106,14 +106,17 @@ function finishGame() {
     $('#message').empty('')
 
     if (count === 7) {
-        $('#message').append(`You Win!`)       
+        $('#message').append(`You Win!`)
         alert('You win!')
     } else {
         $('#message').append(`Try Again..`)
         alert('Try again!')
     }
-
 }
+$('.resetBtn').on('click', (function() {
+    location.reload(true);
+})
+)
 
 function timeConversion(t) {
     var minutes = Math.floor(t / 60)
@@ -128,13 +131,14 @@ function timeConversion(t) {
         minutes = ` 0` + minutes
     }
     return minutes + ':' + seconds
-}
+};
+
 let message = ''
 $('#message').html('Good Luck!')
 let time = 120
 $('.time').html(` 02:00`)
 
-let gameTimer = setInterval(function () {
+let gameTimer = setInterval(function() {
     time--
     if (time > 0) {
         $('.time').html(timeConversion(time))

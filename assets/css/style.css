@@ -37,6 +37,8 @@ body {
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
     font-size: 150%;
+    background-color: #367588;
+    margin: 0px 50px 0px 0px;
 }
 
 .quizAnswer {
@@ -51,4 +53,13 @@ body {
 #message {
     display: flex;
     justify-content: center;
+}
+
+.resetBtn {
+    background-color: lightgreen;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 150%; 
+    border: 1px solid grey;
+    margin: 0px 0px 0px 50px;
 }
